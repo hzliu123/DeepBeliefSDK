@@ -49,6 +49,13 @@ LIBCPPFLAGS += \
 -mfloat-abi=hard
 endif
 
+ifeq ($(TARGET),pi3)
+LIBCPPFLAGS += \
+-mcpu=cortex-a53 \
+-mfpu=neon-vfpv4 \
+-mfloat-abi=hard
+endif
+
 ifeq ($(TARGET),beagle)
 LIBCPPFLAGS += \
 -march=armv7-a \
